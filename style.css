@@ -12,6 +12,9 @@
   --bacdob: rgba(208, 8, 48, 0.2);
   --hoube: rgba(237, 16, 27, 0.378);
   --swit: white url(./assets/sun.svg) no-repeat center;
+  --rir: rgba(151, 34, 34, 0.694);
+  --fff:0px 0px 0px 3px rgba(241, 3, 27, 0.475);
+
 }
 .lu {
   --text-color: rgb(49, 150, 226);
@@ -21,11 +24,12 @@
   --bacdob: rgba(17, 35, 202, 0.2);
   --houve: rgba(65, 114, 230, 0.378);
   --swit: white url(./assets/moon-stars.svg) no-repeat center;
-
+  --rir:rgba(52, 86, 163, 0.378);
+   
 }
 body {
   backdrop-filter: brightness(1.4);
-  transition: backdrop-filter 0.5s ease, background 0.5s ease
+  transition: backdrop-filter 0.5s ease, background 0.5s ease;
 }
 body {
   background: var(--bg-url) no-repeat top center/cover;
@@ -37,7 +41,8 @@ body * {
 }
 
 #container {
-  width: 368px;
+  width: 100%;
+  max-width: 588px;
   margin: 10px auto 0px;
   padding: 0px 24px;
 }
@@ -59,6 +64,9 @@ body * {
   margin: 4px auto;
   margin: 4px auto;
 }
+#switch button{
+  outline: 8px solid var(--rir) ;
+}
 #switch button {
   width: 32px;
   height: 32px;
@@ -71,10 +79,11 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+ animation: slide-b 0.4s;
 }
 .lu #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards;
+ 
 }
 #switch span {
   display: block;
@@ -92,7 +101,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 12px 0px;
+  padding: 20px 0px;
 }
 ul li a {
   display: flex;
@@ -132,4 +141,20 @@ footer {
   text-align: center;
   padding: 8px 0px;
   font-size: 12px;
+}
+@keyframes slide-in {
+  from {
+    rigth: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes slide-b{
+ from{
+  left: 50%;
+ }
+ to{
+  left: 0%;
+ }
 }
