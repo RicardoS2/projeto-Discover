@@ -5,6 +5,6 @@ function toggleMode() {
   if (html.classList.contains('lu')) {
     img.setAttribute("src", "./assets/avatar.png")
   } else {
-    img.setAttribute("src", "./assets/3.png")
+    img.setAttribute("src", "./assets/kuromi.png")
   }
 }

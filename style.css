@@ -5,38 +5,36 @@
 }
 
 :root {
-  --text-color: rgb(222, 28, 28);
-  --bg-url: url(./assets/2.png);
-  --box-shadow: 0px 0px 12px rgb(255, 0, 0);
-  --bo: 1px solid rgba(200, 30, 30, 0.694);
-  --bacdob: rgba(208, 8, 48, 0.2);
-  --hoube: rgba(237, 16, 27, 0.378);
+  --cor_do_texto: rgb(231 229 228);
+  --fundo_color:rgb(31 41 55);
+ --cor_neon_box: 0px 0px 5px rgb(55 65 81);
+  --borda_da_box: 1px solid rgba(156, 163, 175, 0.349) ;
+  --funda_da_box: rgb(55 65 81);
+ 
   --swit: white url(./assets/sun.svg) no-repeat center;
-  --rir: rgba(151, 34, 34, 0.694);
-  --fff:0px 0px 0px 3px rgba(241, 3, 27, 0.475);
+  --botao_troca_mode: rgb(55 65 81);
+
 
 }
 .lu {
-  --text-color: rgb(49, 150, 226);
-  --bg-url: url(./assets/HD-wallpaper-plain-gradient-blue-abstract-thumbnail.jpg);
-  --box-shadow: 0px 0px 12px rgb(45, 105, 169);
-  --bo: 1px solid rgba(81, 172, 241, 0.694);
-  --bacdob: rgba(17, 35, 202, 0.2);
-  --houve: rgba(65, 114, 230, 0.378);
+  --cor_do_texto: rgb(214 211 209);
+  --fundo_color:rgb(136 19 55);
+  --cor_neon_box: 0px 0px 12px ;
+  --borda_da_box: 1px solid rgba(81, 172, 241, 0.694);
+  --funda_da_box: rgba(17, 35, 202, 0.2);
+  --funda_da_box: rgba(65, 114, 230, 0.378);
   --swit: white url(./assets/moon-stars.svg) no-repeat center;
-  --rir:rgba(52, 86, 163, 0.378);
+  --botao_troca_mode:rgba(52, 86, 163, 0.378);
    
 }
+
+
 body {
-  backdrop-filter: brightness(1.4);
-  transition: backdrop-filter 0.5s ease, background 0.5s ease;
-}
-body {
-  background: var(--bg-url) no-repeat top center/cover;
+ background-color:var(--fundo_color) ;
 }
 body * {
   font-family: "Inter", sans-serif;
-  color: var(--text-color);
+  color: var(--cor_do_texto);
   transition: all 0.5s ease;
 }
 
@@ -65,7 +63,7 @@ body * {
   margin: 4px auto;
 }
 #switch button{
-  outline: 8px solid var(--rir) ;
+  outline: 8px solid var(--botao_troca_mode) ;
 }
 #switch button {
   width: 32px;
@@ -89,8 +87,8 @@ body * {
   display: block;
   width: 64px;
   height: 24px;
-  background-color: var(--bacdob);
-  border: var(--bo);
+  background-color: var(--funda_da_box);
+  border: var(--borda_da_box);
   backdrop-filter: blur(4px);
   border-radius: 900px;
   margin: 4px auto;
@@ -109,18 +107,18 @@ ul li a {
   justify-content: center;
 
   padding: 16px 24px;
-  background: var(--bacdob);
-  border: var(--bo);
+  background: var(--funda_da_box);
+  border: var(--borda_da_box);
   border-radius: 8px;
   backdrop-filter: blur(4px);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.5s;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--cor_neon_box);
 }
 ul li a:hover {
-  background: var(--houve);
-  border: 1.5px solid var(--text-color);
+  background: var(--funda_da_box);
+  border: 1.5px solid var(--cor_do_texto);
 }
 
 #icons {
